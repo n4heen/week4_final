@@ -11,6 +11,17 @@ body {
     background-color: #fff
 }
 
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+#landing{
+   background-image:url(/film-reel-cinema-png-favpng-xbmWW1LM6mx1zXMf3LAhMhYmm.jpg) ;
+    padding-bottom: 50px;
+}
+
 .nav__container {
     width: 100%;
     max-width: 1200px;
@@ -53,8 +64,60 @@ body {
     background-color: orange;
     transition: all 300ms ease;
 }
+
 .link__hover-effect:hover:after {
     left: 0;
     width: 100%;
 
+}
+
+.searchbar {
+    padding-top: 50px;
+
+}
+.searchbar__title{
+    font-weight: bold;
+    font-size: 52px;
+    color:orange;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #0a1f44;
+    color: #0a1f44;
+    display: inline-block;
+    height: 70px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 15px;
+    transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+    width: 100%;
+    max-width: 800px;
+    font-size: 24px;
+    padding-left: 25px;
+  
+}
+input:focus{
+   border: 1px orange solid;
+   transition: all 500ms ease;
+}
+.searchbar__btn{
+padding: 8px 24px 8px 24px;
+border: none;
+background-color: orange;
+color: white;
+font-size: 24px;
+font-weight: bold;
+border-radius: 4px;
+}
+.searchbar__btn:hover{
+    background-color: rgb(182, 118, 0);
+    transition: all 100ms ease;
 }
