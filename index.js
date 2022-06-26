@@ -25,7 +25,7 @@ async function filmApi() {
             <p><b>Type:</b> film</p>
             <p><b>imdbID:</b>ID</p>
             <p><b>Movie Poster</b>Poster</p>
-    </div>oh 
+    </div>
 </div>`
     }).join("")
 }
