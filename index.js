@@ -18,7 +18,14 @@ async function filmApi() {
     const films = await fetch('https://www.omdbapi.com/?i=tt3896198&apikey=6954bedd')
     const filmData = await films.json()
     filmListEl.innerHTML= filmData.map((film)=>{
-        `<div class="film-card">
+      filmHTML(film)
+    }).join("")
+}
+filmApi()
+
+
+function filmHTML(film){
+  return  `<div class="film-card">
     <div class="film-card__container">
         <h3>film title</h3>
             <p><b>Year:</b>0000</p>
@@ -27,8 +34,5 @@ async function filmApi() {
             <p><b>Movie Poster</b>Poster</p>
     </div>
 </div>`
-    }).join("")
 }
-filmApi()
-
 
