@@ -30,7 +30,6 @@ Support forum: https://www.themoviedb.org/talk/category/5047958519c29526b50017d6
 Wrappers & libraries: https://www.themoviedb.org/documentation/api/wrappers-libraries
 Service status: https://status.themoviedb.org
 If you have any questions, feel free to create a new discussion in our support forum.
-
 --
 The Movie Database Team
 https://www.themoviedb.org
@@ -39,7 +38,7 @@ https://www.themoviedb.org
 
 const filmListEl = document.querySelector('.film-list')
 async function filmApi() {
-    const films = await fetch('https://www.omdbapi.com/?apikey=6954bedd&')
+    const films = await fetch('https://www.omdbapi.com/?apikey=6954bedd&s=fast')
     const filmData = await films.json()
     filmListEl.innerHTML= filmData.map((film)=>{
       filmHTML(film)
