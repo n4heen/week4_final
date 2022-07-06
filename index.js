@@ -40,7 +40,7 @@ const filmListEl = document.querySelector('.film-list')
 async function filmApi() {
     const films = await fetch('https://www.omdbapi.com/?apikey=6954bedd&s=fast')
     const filmData = await films.json()
-    filmListEl.innerHTML= filmData.map((film)=>{
+    filmListEl.innerHTML= filmData.Search.map((film)=>{
       filmHTML(film)
     }).join("")
 }
