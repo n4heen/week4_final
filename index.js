@@ -35,15 +35,19 @@ Please append it to all of your API requests*/
 //             <p><b>imdbID:</b>ID</p>
 //             <p><b>Movie Poster</b>Poster</p>
 //     </div>
-// </div>`
+// </div>` 
 // }
 
+
 const filmListEl = document.querySelector(".film-list");
-async function filmApi() {
-  const films = await fetch("https://www.omdbapi.com/?apikey=6954bedd&s=fast");
-  const filmData = await films.json();
-  filmListEl.innerHTML = filmData.Search.map(() => filmHTML()).join("");
-  console.log(filmData.Search);
+
+function ApiData() {
+  async function filmApi() {
+    const films = await fetch("https://www.omdbapi.com/?apikey=6954bedd&s=fast");
+    const filmData = await films.json();
+    filmListEl.innerHTML = filmData.Search.map(() => filmHTML()).join("");
+    console.log(filmData.Search);
+  }
 }
 filmApi();
 
